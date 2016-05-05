@@ -48,8 +48,9 @@ def calculatePrecision(candidate, reference, n):
         for item in ngramlist:
             referencengrams.append(item)
 
-    r += min(referencelengths, key=lambda x: abs(candidateLength - x))
-    c += candidateLength
+    if n == 1:
+        r += min(referencelengths, key=lambda x: abs(candidateLength - x))
+        c += candidateLength
     referenceCounter = Counter(referencengrams)
     candidateCounter = Counter(candidatengrams)
 
