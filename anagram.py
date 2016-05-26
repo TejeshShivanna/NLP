@@ -1,3 +1,4 @@
+#This Python program will take a string as the first parameter, and write an output file called anagram_out.txt which contains all the anagrams (permutations) of the string, one per line, sorted alphabetically.
 import sys
 lst = []
 def anagram(str, inputstring):
